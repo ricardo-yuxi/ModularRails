@@ -1,3 +1,9 @@
+PATH
+  remote: engines/core
+  specs:
+    dwl_core (0.0.1)
+      rails (~> 5.0.0, >= 5.0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -157,6 +163,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
+  dwl_core!
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

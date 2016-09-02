@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Dwl::Core::VERSION           # Add namespace
   s.authors     = ["Ricardo Rojas"]
   s.email       = ["reddrum7@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = ""
   s.summary     = "Core features of DWL"
   s.description = "Core features of DWL"
   s.license     = "MIT"
