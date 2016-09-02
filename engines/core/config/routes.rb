@@ -1,2 +1,2 @@
-Core::Engine.routes.draw do
+Dwl::Core::Engine.routes.draw do
 end

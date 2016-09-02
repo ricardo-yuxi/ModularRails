@@ -1,17 +1,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "core/version"
+require "dwl/core/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "core"
-  s.version     = Core::VERSION
-  s.authors     = [""]
-  s.email       = [""]
+  s.name        = "dwl_core"                   # Rename core to dwl_core
+  s.version     = Dwl::Core::VERSION           # Add namespace
+  s.authors     = ["Ricardo Rojas"]
+  s.email       = ["reddrum7@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Core."
-  s.description = "TODO: Description of Core."
+  s.summary     = "Core features of DWL"
+  s.description = "Core features of DWL"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
