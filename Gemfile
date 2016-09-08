@@ -27,4 +27,8 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+gem 'modular_engine'
+gem 'deface'
 gem 'dwl_core', path: 'engines/core'
+gem 'dwl_orders', path: 'engines/orders'
