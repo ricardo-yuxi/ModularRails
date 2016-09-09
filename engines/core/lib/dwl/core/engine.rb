@@ -3,6 +3,7 @@ module Dwl
     class Engine < ::Rails::Engine
       isolate_namespace Dwl
 
+      paths["app/views"] << "app/views/dwl"
 
       initializer :append_migrations do |app|
         unless app.root.to_s.match(root.to_s)
