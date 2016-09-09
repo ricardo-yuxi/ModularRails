@@ -12,7 +12,7 @@
       <div class="navbar-header">
         <%= link_to 'Dwl Engine', dwl.root_path, class: "navbar-brand" %>
       </div>
-      <%- if current_user.admin? %>
+      <%- if current_user && current_user.admin? %>
         <div class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav">
             <li class="<%= active(dwl.root_path) %>">
