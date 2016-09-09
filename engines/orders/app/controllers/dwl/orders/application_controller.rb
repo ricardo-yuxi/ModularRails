@@ -1,6 +1,6 @@
 module Dwl
   module Orders
-    class ApplicationController < ActionController::Base
+    class ApplicationController < Dwl::ActionController::Base
     end
   end
 end
