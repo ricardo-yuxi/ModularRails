@@ -1,63 +1,57 @@
 <%= link_to 'New order', dwl.new_order_path,
     class: 'pull-right btn btn-primary' %>
 
-<h1>Listing Orders</h1>
+<h2>Listing Orders</h2>
 <hr>
-<div class="col-lg-9">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      Orders Awaiting Delivery
+<div class="row">
+  <div class="col-lg-9">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Orders Awaiting Delivery
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Compartment#</th>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Selection</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @orders.each do |order| %>
+              <td><%= order.id %></td>
+              <td><%= order.order_compartment %></td>
+              <td><%= order.customer_name %></td>
+              <td><%= order.customer_phone %></td>
+              <td><%= order.giveaway_selection %></td>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div><!-- end div table -->
+  </div><!-- end col-lg-9 -->
+  <div class="col-lg-3 col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        Orders Queued for a compartment:
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <tbody>
+            <% @orders.each do |order| %>
+              <td><%= order.id %></td>
+              <td><%= order.customer_name %></td>
+            <% end %>
+          </tbody>
+        </table>
+      </div><!-- end table responsive -->
     </div>
 
-    <div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Order#</th>
-            <th>Compartment#</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Selection</th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= content_tag_for(:tr, @orders) do |order| %>
-            <td>
-              <input id='<%= "cancell_#{order.id}" %>'
-                     type="checkbox"
-                     value='<%= "#{order.id}" %>'></input>
-            </td>
-            <td id='<%= "assigned_#{order.id}" %>'><%= order.id %></td>
-            <td><%= order.order_compartment %></td>
-            <td><%= order.customer_name %></td>
-            <td><%= order.customer_phone %></td>
-            <td><%= order.giveaway_selection %></td>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div><!-- end div table -->
-</div><!-- end col-lg-9 -->
+  </div><!-- end col-lg-3 -->
+</div><!-- end row -->
 
-<div class="col-lg-3 col-md-12">
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      Orders Queued for a compartment: <span id="created_count"><%= @orders.created.count %>
-    </div>
-
-    <div class="table-responsive">
-      <table class="table">
-        <tbody>
-          <%= content_tag_for(:tr, @orders) do |order| %>
-            <td><input id='<%= "cancell_#{order.id}" %>' type="checkbox" value='<%= "#{order.id}" %>'></input></td>
-            <td id='<%= "created_#{order.id}" %>'><%= order.id %></td>
-            <td><%= order.customer_name %></td>
-          <% end %>
-        </tbody>
-      </table>
-    </div><!-- end table responsive -->
-  </div>
-
-</div><!-- end col-lg-3 -->
