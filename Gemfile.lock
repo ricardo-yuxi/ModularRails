@@ -13,6 +13,7 @@ PATH
   remote: engines/orders
   specs:
     dwl_orders (0.0.1)
+      deface (~> 1.0.1)
       dwl_core
       rails (~> 5.0.0.1)
 

@@ -12,18 +12,22 @@
       <div class="navbar-header">
         <%= link_to 'Dwl Engine', dwl.root_path, class: "navbar-brand" %>
       </div>
-      <%- if current_user && current_user.admin? %>
+      <%- if current_user %>
         <div class="navbar-collapse collapse" id="navbar">
           <ul class="nav navbar-nav">
-            <li class="<%= active(dwl.root_path) %>">
+
+            <li data-dwl-hook="main_nav" class="<%= active(dwl.root_path) %>">
               <%= link_to 'Home', dwl.root_path %>
             </li>
+
             <li class="<%= active(dwl.edit_user_registration_path) %>">
               <%= link_to 'My Account', dwl.edit_user_registration_path %>
             </li>
+
             <li class="<%= active(dwl.admin_path) %>">
               <%= link_to 'Admin', dwl.admin_path %>
             </li>
+
             <li>
               <%= link_to 'Logout', dwl.destroy_user_session_path,
                                    method: :delete %>
