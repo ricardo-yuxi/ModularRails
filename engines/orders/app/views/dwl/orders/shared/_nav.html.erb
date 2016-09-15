@@ -1,0 +1,15 @@
+<ul class="nav nav-pills navbar-right">
+  <li role="presentation" class="<%= active(dwl.orders_path) %>">
+    <%= link_to 'Orders', dwl.orders_path %>
+  </li>
+
+  <li role="presentation" class="<%= active(dwl.new_order_path) %>">
+    <%= link_to 'New Order', dwl.new_order_path %>
+  </li>
+
+  <li role="presentation" class="<%= active(dwl.orders_metrics_path) %>">
+    <%= link_to 'Metrics', dwl.orders_metrics_path %>
+  </li>
+</ul>
+
+<div class="clearfix"></div>
