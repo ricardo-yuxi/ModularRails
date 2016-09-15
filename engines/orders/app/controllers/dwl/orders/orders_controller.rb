@@ -10,10 +10,6 @@ module Dwl
         @orders = Order.all
       end
 
-      # GET /orders/1
-      def show
-      end
-
       # GET /orders/new
       def new
         @order = Order.new
