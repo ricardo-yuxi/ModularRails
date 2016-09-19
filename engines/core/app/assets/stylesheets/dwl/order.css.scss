@@ -1,0 +1,21 @@
+$white: white;
+
+.navbar {
+  margin: 0;
+}
+
+.box-enter {
+  background: orange;
+  color: $white;
+  text-align: center;
+}
+
+.bs-glyphicon-list {
+  font-size: 18px;
+  list-style: none;
+  margin: 10px;
+}
+
+.glyphicon-class {
+  display: block;
+}

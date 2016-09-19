@@ -1,1 +1,1 @@
-Rails.application.config.assets.precompile += ['dwl/*.css', 'dwl/*.js']
+Rails.application.config.assets.precompile += ['dwl/*.css.scss', 'dwl/*.js']
