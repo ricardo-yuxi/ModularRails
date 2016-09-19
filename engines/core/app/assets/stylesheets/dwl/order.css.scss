@@ -12,8 +12,12 @@ $white: white;
 
 .box-enter {
   background: orange;
-  color: $white;
   text-align: center;
+}
+
+.box-enter a {
+  color: $white;
+  text-decoration: none;
 }
 
 .bs-glyphicon-list {

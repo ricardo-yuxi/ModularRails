@@ -9,10 +9,12 @@
   <% end %>
 </div>
 <div class="col-md-6 box-enter">
-  <ul class="bs-glyphicon-list">
-    <li>
-      <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
-      <span class="glyphicon-class">Pick up an Order</span>
-    </li>
-  </ul>
+  <%= link_to '#', remote: true do %>
+    <ul class="bs-glyphicon-list">
+      <li>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        <span class="glyphicon-class">Pickup an Order</span>
+      </li>
+    </ul>
+  <% end %>
 </div>
