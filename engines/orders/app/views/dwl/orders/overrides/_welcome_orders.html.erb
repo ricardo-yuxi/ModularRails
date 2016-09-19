@@ -1,10 +1,12 @@
 <div class="col-md-6 box-enter">
-  <ul class="bs-glyphicon-list">
-    <li>
-      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-      <span class="glyphicon-class">Enter an Order</span>
-    </li>
-  </ul>
+  <%= link_to dwl.new_order_path, remote: true do %>
+    <ul class="bs-glyphicon-list">
+      <li>
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        <span class="glyphicon-class">Enter an Order</span>
+      </li>
+    </ul>
+  <% end %>
 </div>
 <div class="col-md-6 box-enter">
   <ul class="bs-glyphicon-list">

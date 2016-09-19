@@ -21,13 +21,7 @@
           </thead>
           <tbody>
             <% @orders.each do |order| %>
-              <tr>
-                <td><%= order.id %></td>
-                <td><%= order.order_compartment %></td>
-                <td><%= order.customer_name %></td>
-                <td><%= order.customer_phone %></td>
-                <td><%= order.giveaway_selection %></td>
-              </tr>
+              <%= render "row", order: order %>
             <% end %>
           </tbody>
         </table>

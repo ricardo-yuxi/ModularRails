@@ -18,11 +18,8 @@ module Dwl
       # POST /orders
       def create
         @order = Order.new(order_params)
-
         if @order.save
-          redirect_to orders_path, notice: 'Order was successfully created.'
-        else
-          render :new
+          # nothing
         end
       end
 
