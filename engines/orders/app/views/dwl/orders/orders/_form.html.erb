@@ -9,12 +9,8 @@
         <div class="modal-body">
           <div class="alert alert-danger" role="alert" style="display: none;"></div>
             <div class="form-group">
-              <%= f.label :customer_name, class: "control-label" %>
-              <%= f.text_field :customer_name, class: "form-control"%>
-            </div>
-            <div class="form-group">
-              <%= f.label :customer_phone, class: "control-label" %>
-              <%= f.text_field :customer_phone, class: "form-control"%>
+              <%= f.label :status, class: "control-label" %>
+              <%= f.select :status, Dwl::Orders::Order.statuses.keys, class: "form-control"%>
             </div>
             <div class="form-group">
               <div>
