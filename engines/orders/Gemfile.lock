@@ -4,6 +4,7 @@ PATH
     dwl_core (0.0.1)
       autoprefixer-rails (~> 5.1.5)
       bootstrap-sass (~> 3.3.3)
+      cancan (= 1.6.10)
       devise (= 4.2.0)
       rails (~> 5.0.0, >= 5.0.0.1)
       sass-rails (~> 5.0.1)
@@ -12,6 +13,7 @@ PATH
   remote: .
   specs:
     dwl_orders (0.0.1)
+      deface (~> 1.0.1)
       dwl_core
       rails (~> 5.0.0.1)
 
@@ -64,7 +66,14 @@ GEM
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
     builder (3.2.2)
+    cancan (1.6.10)
+    colorize (0.8.1)
     concurrent-ruby (1.0.2)
+    deface (1.0.2)
+      colorize (>= 0.5.8)
+      nokogiri (~> 1.6.0)
+      polyglot
+      rails (>= 3.1)
     devise (4.2.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -93,6 +102,7 @@ GEM
       pkg-config (~> 1.1.7)
     orm_adapter (0.5.0)
     pkg-config (1.1.7)
+    polyglot (0.3.5)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)

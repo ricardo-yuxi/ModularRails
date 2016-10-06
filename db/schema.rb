@@ -10,27 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160909163901) do
+ActiveRecord::Schema.define(version: 20161006185155) do
 
   create_table "dwl_orders_orders", force: :cascade do |t|
-    t.string   "customer_name"
-    t.string   "customer_phone"
-    t.string   "giveaway_selection"
-    t.string   "deliver_order_number"
-    t.text     "scan_badge_info"
-    t.integer  "order_compartment"
-    t.integer  "delivery_method",        default: 0, null: false
-    t.integer  "status",                 default: 0, null: false
-    t.datetime "assigned_date"
-    t.datetime "delivered_date"
-    t.datetime "pickup_email_sent_date"
-    t.datetime "pickup_date"
+    t.integer  "status",      default: 0, null: false
     t.integer  "position_id"
     t.integer  "item_id"
-    t.datetime "created_at",                         null: false
-    t.datetime "updated_at",                         null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "user_id"
     t.index ["item_id"], name: "index_dwl_orders_orders_on_item_id"
     t.index ["position_id"], name: "index_dwl_orders_orders_on_position_id"
+    t.index ["user_id"], name: "index_dwl_orders_orders_on_user_id"
   end
 
   create_table "dwl_users", force: :cascade do |t|
