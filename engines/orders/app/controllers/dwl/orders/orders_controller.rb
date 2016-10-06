@@ -12,12 +12,12 @@ module Dwl
 
       # GET /orders/new
       def new
-        @order = Order.new
+        @order = current_user.orders.build
       end
 
       # POST /orders
       def create
-        @order = Order.new(order_params)
+        @order = current_user.orders.build(order_params)
         if @order.save
           # nothing
         end

@@ -5,6 +5,7 @@ module Dwl
     devise :database_authenticatable, :registerable,
            :recoverable, :rememberable, :trackable, :validatable
 
+    has_many :orders
     scope :ordered, -> { order('created_at desc') }
   end
 end
